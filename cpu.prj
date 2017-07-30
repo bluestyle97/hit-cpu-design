@@ -1,0 +1,7 @@
+vhdl work "writebacker.vhd"
+vhdl work "mem_manager.vhd"
+vhdl work "mem_access.vhd"
+vhdl work "fetcher.vhd"
+vhdl work "clock.vhd"
+vhdl work "alu.vhd"
+vhdl work "cpu.vhd"

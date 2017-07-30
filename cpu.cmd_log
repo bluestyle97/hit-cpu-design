@@ -1,0 +1,67 @@
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 cpu.ngc cpu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/CPU_test/cpu.xst" -ofn "C:/Documents and Settings/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 "cpu.ngc" cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "F:/CPU_test/cpu.xst" -ofn "F:/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "F:/CPU_test/cpu.xst" -ofn "F:/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+xst -intstyle ise -ifn "D:/Xilinx/Projects/CPU_test/cpu.xst" -ofn "D:/Xilinx/Projects/CPU_test/cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CPU.ucf -p xc3s500e-pq208-5 cpu.ngc cpu.ngd  
+map -intstyle ise -p xc3s500e-pq208-5 -cm area -ir off -pr off -c 100 -o cpu_map.ncd cpu.ngd cpu.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_map.ncd cpu.ncd cpu.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu.twx cpu.ncd -o cpu.twr cpu.pcf -ucf CPU.ucf 
+bitgen -intstyle ise -f cpu.ut cpu.ncd 

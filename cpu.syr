@@ -1,0 +1,717 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.43 secs
+ 
+--> Reading design: cpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-pq208
+
+---- Source Options
+Top Module Name                    : cpu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/clock.vhd" in Library work.
+Architecture behavioral of Entity clock is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/fetcher.vhd" in Library work.
+Architecture behavioral of Entity fetcher is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/mem_manager.vhd" in Library work.
+Architecture behavioral of Entity mem_manager is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/writebacker.vhd" in Library work.
+Architecture behavioral of Entity writebacker is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/mem_access.vhd" in Library work.
+Architecture behavioral of Entity mem_access is up to date.
+Compiling vhdl file "D:/Xilinx/Projects/CPU_test/cpu.vhd" in Library work.
+Architecture behavioral of Entity cpu is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <cpu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clock> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fetcher> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mem_manager> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <writebacker> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mem_access> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <cpu> in library <work> (Architecture <behavioral>).
+Entity <cpu> analyzed. Unit <cpu> generated.
+
+Analyzing Entity <clock> in library <work> (Architecture <behavioral>).
+Entity <clock> analyzed. Unit <clock> generated.
+
+Analyzing Entity <fetcher> in library <work> (Architecture <behavioral>).
+Entity <fetcher> analyzed. Unit <fetcher> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <behavioral>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing Entity <mem_manager> in library <work> (Architecture <behavioral>).
+Entity <mem_manager> analyzed. Unit <mem_manager> generated.
+
+Analyzing Entity <writebacker> in library <work> (Architecture <behavioral>).
+Entity <writebacker> analyzed. Unit <writebacker> generated.
+
+Analyzing Entity <mem_access> in library <work> (Architecture <behavioral>).
+Entity <mem_access> analyzed. Unit <mem_access> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/clock.vhd".
+    Found finite state machine <FSM_0> for signal <temp>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0001                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <t>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   4 D-type flip-flop(s).
+Unit <clock> synthesized.
+
+
+Synthesizing Unit <fetcher>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/fetcher.vhd".
+    Found 16-bit register for signal <pc_o>.
+    Found 16-bit register for signal <ir_o>.
+    Found 16-bit up counter for signal <pc>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  32 D-type flip-flop(s).
+Unit <fetcher> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/alu.vhd".
+    Found 16x2-bit ROM for signal <wb$mux0002>.
+    Found 16-bit tristate buffer for signal <addr_o>.
+    Found 1-bit register for signal <memr>.
+    Found 1-bit register for signal <memw>.
+    Found 1-bit register for signal <nzero>.
+    Found 2-bit register for signal <wb>.
+    Found 8-bit tristate buffer for signal <alu_o>.
+    Found 1-bit register for signal <ior>.
+    Found 1-bit register for signal <iow>.
+    Found 1-bit register for signal <jmp>.
+    Found 8-bit 8-to-1 multiplexer for signal <$varindex0000> created at line 92.
+    Found 8-bit 8-to-1 multiplexer for signal <$varindex0001> created at line 92.
+    Found 16-bit register for signal <Mtridata_addr_o> created at line 76.
+    Found 8-bit register for signal <Mtridata_alu_o> created at line 92.
+    Found 8-bit addsub for signal <Mtridata_alu_o$share0000>.
+    Found 1-bit register for signal <Mtrien_addr_o> created at line 76.
+    Found 1-bit register for signal <Mtrien_alu_o> created at line 92.
+    Found 64-bit register for signal <reg>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  98 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 Multiplexer(s).
+	inferred  24 Tristate(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <mem_manager>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/mem_manager.vhd".
+WARNING:Xst:736 - Found 16-bit latch for signal <Mtridata_write_o> created at line 66. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:736 - Found 1-bit latch for signal <Mtrien_write_o> created at line 66. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 16-bit tristate buffer for signal <addr>.
+    Found 8-bit tristate buffer for signal <data_o>.
+    Found 16-bit tristate buffer for signal <write_o>.
+    Summary:
+	inferred  40 Tristate(s).
+Unit <mem_manager> synthesized.
+
+
+Synthesizing Unit <writebacker>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/writebacker.vhd".
+Unit <writebacker> synthesized.
+
+
+Synthesizing Unit <mem_access>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/mem_access.vhd".
+    Found 8-bit tristate buffer for signal <IOW0>.
+    Found 8-bit tristate buffer for signal <IOW1>.
+    Found 8-bit tristate buffer for signal <IOW2>.
+    Found 8-bit tristate buffer for signal <IOW3>.
+    Found 8-bit tristate buffer for signal <data_o>.
+    Found 16-bit tristate buffer for signal <DBus>.
+    Found 16-bit tristate buffer for signal <ABus>.
+    Found 16-bit tristate buffer for signal <ir>.
+    Found 2-bit tristate buffer for signal <IOAD>.
+    Summary:
+	inferred  90 Tristate(s).
+Unit <mem_access> synthesized.
+
+
+Synthesizing Unit <cpu>.
+    Related source file is "D:/Xilinx/Projects/CPU_test/cpu.vhd".
+Unit <cpu> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x2-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 22
+ 1-bit register                                        : 8
+ 16-bit register                                       : 3
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 9
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 2
+ 8-bit 8-to-1 multiplexer                              : 2
+# Tristates                                            : 29
+ 1-bit tristate buffer                                 : 16
+ 16-bit tristate buffer                                : 5
+ 2-bit tristate buffer                                 : 1
+ 8-bit tristate buffer                                 : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <u1/temp/FSM> on signal <temp[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00001
+ 0001  | 00010
+ 0010  | 00100
+ 0100  | 01000
+ 1000  | 10000
+-------------------
+WARNING:Xst:1426 - The value init of the FF/Latch FFd5 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
+
+Synthesizing (advanced) Unit <alu>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_wb_mux0002> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <alu> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 16x2-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 134
+ Flip-Flops                                            : 134
+# Latches                                              : 2
+ 1-bit latch                                           : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 16
+ 1-bit 8-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd5 hinder the constant cleaning in the block FSM_0-parent.
+   You should achieve better results by setting this init to 0.
+INFO:Xst:2261 - The FF/Latch <u1/temp_FSM_FFd1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u1/t_2> 
+INFO:Xst:2261 - The FF/Latch <u1/temp_FSM_FFd2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u1/t_1> 
+INFO:Xst:2261 - The FF/Latch <u1/temp_FSM_FFd3> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <u1/t_0> 
+WARNING:Xst:2042 - Unit cpu: 24 internal tristates are replaced by logic (pull-up yes): data_r<0>, data_r<1>, data_r<2>, data_r<3>, data_r<4>, data_r<5>, data_r<6>, data_r<7>, ir_t<0>, ir_t<10>, ir_t<11>, ir_t<12>, ir_t<13>, ir_t<14>, ir_t<15>, ir_t<1>, ir_t<2>, ir_t<3>, ir_t<4>, ir_t<5>, ir_t<6>, ir_t<7>, ir_t<8>, ir_t<9>.
+WARNING:Xst:2042 - Unit mem_manager: 40 internal tristates are replaced by logic (pull-up yes): addr<0>, addr<10>, addr<11>, addr<12>, addr<13>, addr<14>, addr<15>, addr<1>, addr<2>, addr<3>, addr<4>, addr<5>, addr<6>, addr<7>, addr<8>, addr<9>, data_o<0>, data_o<1>, data_o<2>, data_o<3>, data_o<4>, data_o<5>, data_o<6>, data_o<7>, write_o<0>, write_o<10>, write_o<11>, write_o<12>, write_o<13>, write_o<14>, write_o<15>, write_o<1>, write_o<2>, write_o<3>, write_o<4>, write_o<5>, write_o<6>, write_o<7>, write_o<8>, write_o<9>.
+WARNING:Xst:2042 - Unit alu: 24 internal tristates are replaced by logic (pull-up yes): addr_o<0>, addr_o<10>, addr_o<11>, addr_o<12>, addr_o<13>, addr_o<14>, addr_o<15>, addr_o<1>, addr_o<2>, addr_o<3>, addr_o<4>, addr_o<5>, addr_o<6>, addr_o<7>, addr_o<8>, addr_o<9>, alu_o<0>, alu_o<1>, alu_o<2>, alu_o<3>, alu_o<4>, alu_o<5>, alu_o<6>, alu_o<7>.
+
+Optimizing unit <cpu> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <mem_manager> ...
+
+Optimizing unit <fetcher> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 4.
+FlipFlop u1/temp_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop u1/temp_FSM_FFd3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 154
+ Flip-Flops                                            : 154
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : cpu.ngr
+Top Level Output File Name         : cpu
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 128
+
+Cell Usage :
+# BELS                             : 480
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 15
+#      LUT2                        : 70
+#      LUT3                        : 117
+#      LUT4                        : 152
+#      MUXCY                       : 22
+#      MUXF5                       : 60
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 171
+#      FD                          : 16
+#      FDC                         : 7
+#      FDCP                        : 16
+#      FDE                         : 90
+#      FDE_1                       : 16
+#      FDP                         : 1
+#      FDR                         : 8
+#      LD                          : 17
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 127
+#      IBUF                        : 33
+#      IOBUF                       : 16
+#      OBUF                        : 28
+#      OBUFT                       : 50
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500epq208-5 
+
+ Number of Slices:                      199  out of   4656     4%  
+ Number of Slice Flip Flops:            171  out of   9312     1%  
+ Number of 4 input LUTs:                356  out of   9312     3%  
+ Number of IOs:                         128
+ Number of bonded IOBs:                 128  out of    158    81%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+clk                                | BUFGP                       | 24    |
+u1/temp_FSM_FFd21                  | BUFG                        | 50    |
+regup1(u5/reg_update1:O)           | BUFG(*)(u3/reg_6_7)         | 64    |
+u1/temp_FSM_FFd1                   | NONE(u4/Mtridata_write_o_15)| 17    |
+u1/temp_FSM_FFd3                   | NONE(u2/pc_o_15)            | 16    |
+-----------------------------------+-----------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------+------------------------+-------+
+Control Signal                         | Buffer(FF name)        | Load  |
+---------------------------------------+------------------------+-------+
+rst                                    | IBUF                   | 8     |
+u2/pc_0__and0000(u2/pc_0__and00001:O)  | NONE(u2/pc_0)          | 1     |
+u2/pc_0__or0000(u2/pc_0__or00001:O)    | NONE(u2/pc_0)          | 1     |
+u2/pc_10__and0000(u2/pc_10__and00001:O)| NONE(u2/pc_10)         | 1     |
+u2/pc_10__or0000(u2/pc_10__or00001:O)  | NONE(u2/pc_10)         | 1     |
+u2/pc_11__and0000(u2/pc_11__and00001:O)| NONE(u2/pc_11)         | 1     |
+u2/pc_11__or0000(u2/pc_11__or00001:O)  | NONE(u2/pc_11)         | 1     |
+u2/pc_12__and0000(u2/pc_12__and00001:O)| NONE(u2/pc_12)         | 1     |
+u2/pc_12__or0000(u2/pc_12__or00001:O)  | NONE(u2/pc_12)         | 1     |
+u2/pc_13__and0000(u2/pc_13__and00001:O)| NONE(u2/pc_13)         | 1     |
+u2/pc_13__or0000(u2/pc_13__or00001:O)  | NONE(u2/pc_13)         | 1     |
+u2/pc_14__and0000(u2/pc_14__and00001:O)| NONE(u2/pc_14)         | 1     |
+u2/pc_14__or0000(u2/pc_14__or00001:O)  | NONE(u2/pc_14)         | 1     |
+u2/pc_15__and0000(u2/pc_15__and00001:O)| NONE(u2/pc_15)         | 1     |
+u2/pc_15__or0000(u2/pc_15__or00001:O)  | NONE(u2/pc_15)         | 1     |
+u2/pc_1__and0000(u2/pc_1__and00001:O)  | NONE(u2/pc_1)          | 1     |
+u2/pc_1__or0000(u2/pc_1__or00001:O)    | NONE(u2/pc_1)          | 1     |
+u2/pc_2__and0000(u2/pc_2__and00001:O)  | NONE(u2/pc_2)          | 1     |
+u2/pc_2__or0000(u2/pc_2__or00001:O)    | NONE(u2/pc_2)          | 1     |
+u2/pc_3__and0000(u2/pc_3__and00001:O)  | NONE(u2/pc_3)          | 1     |
+u2/pc_3__or0000(u2/pc_3__or00001:O)    | NONE(u2/pc_3)          | 1     |
+u2/pc_4__and0000(u2/pc_4__and00001:O)  | NONE(u2/pc_4)          | 1     |
+u2/pc_4__or0000(u2/pc_4__or00001:O)    | NONE(u2/pc_4)          | 1     |
+u2/pc_5__and0000(u2/pc_5__and00001:O)  | NONE(u2/pc_5)          | 1     |
+u2/pc_5__or0000(u2/pc_5__or00001:O)    | NONE(u2/pc_5)          | 1     |
+u2/pc_6__and0000(u2/pc_6__and00001:O)  | NONE(u2/pc_6)          | 1     |
+u2/pc_6__or0000(u2/pc_6__or00001:O)    | NONE(u2/pc_6)          | 1     |
+u2/pc_7__and0000(u2/pc_7__and00001:O)  | NONE(u2/pc_7)          | 1     |
+u2/pc_7__or0000(u2/pc_7__or00001:O)    | NONE(u2/pc_7)          | 1     |
+u2/pc_8__and0000(u2/pc_8__and00001:O)  | NONE(u2/pc_8)          | 1     |
+u2/pc_8__or0000(u2/pc_8__or00001:O)    | NONE(u2/pc_8)          | 1     |
+u2/pc_9__and0000(u2/pc_9__and00001:O)  | NONE(u2/pc_9)          | 1     |
+u2/pc_9__or0000(u2/pc_9__or00001:O)    | NONE(u2/pc_9)          | 1     |
+---------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.278ns (Maximum Frequency: 159.294MHz)
+   Minimum input arrival time before clock: 3.623ns
+   Maximum output required time after clock: 10.475ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.278ns (frequency: 159.294MHz)
+  Total number of paths / destination ports: 88 / 39
+-------------------------------------------------------------------------
+Delay:               3.139ns (Levels of Logic = 1)
+  Source:            u1/t_3 (FF)
+  Destination:       u2/ir_o_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: u1/t_3 to u2/ir_o_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.514   0.651  u1/t_3 (u1/t_3)
+     LUT4:I0->O           16   0.612   0.879  u2/ir_o_cmp_eq00001 (u2/ir_o_cmp_eq0000)
+     FDE_1:CE                  0.483          u2/ir_o_0
+    ----------------------------------------
+    Total                      3.139ns (1.609ns logic, 1.530ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/temp_FSM_FFd21'
+  Clock period: 4.697ns (frequency: 212.881MHz)
+  Total number of paths / destination ports: 184 / 16
+-------------------------------------------------------------------------
+Delay:               4.697ns (Levels of Logic = 17)
+  Source:            u2/pc_1 (FF)
+  Destination:       u2/pc_15 (FF)
+  Source Clock:      u1/temp_FSM_FFd21 rising
+  Destination Clock: u1/temp_FSM_FFd21 rising
+
+  Data Path: u2/pc_1 to u2/pc_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             2   0.514   0.532  u2/pc_1 (u2/pc_1)
+     LUT1:I0->O            1   0.612   0.000  u2/pc_Madd__add0000_cy<1>_rt (u2/pc_Madd__add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  u2/pc_Madd__add0000_cy<1> (u2/pc_Madd__add0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<2> (u2/pc_Madd__add0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<3> (u2/pc_Madd__add0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<4> (u2/pc_Madd__add0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<5> (u2/pc_Madd__add0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<6> (u2/pc_Madd__add0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<7> (u2/pc_Madd__add0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<8> (u2/pc_Madd__add0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<9> (u2/pc_Madd__add0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<10> (u2/pc_Madd__add0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<11> (u2/pc_Madd__add0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<12> (u2/pc_Madd__add0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  u2/pc_Madd__add0000_cy<13> (u2/pc_Madd__add0000_cy<13>)
+     MUXCY:CI->O           0   0.052   0.000  u2/pc_Madd__add0000_cy<14> (u2/pc_Madd__add0000_cy<14>)
+     XORCY:CI->O           1   0.699   0.387  u2/pc_Madd__add0000_xor<15> (u2/pc__add0000<15>)
+     LUT4:I2->O            1   0.612   0.000  u2/pc_Q_mux0000<15>1 (u2/pc_Q_mux0000<15>)
+     FDCP:D                    0.268          u2/pc_15
+    ----------------------------------------
+    Total                      4.697ns (3.779ns logic, 0.919ns route)
+                                       (80.4% logic, 19.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/temp_FSM_FFd1'
+  Total number of paths / destination ports: 40 / 8
+-------------------------------------------------------------------------
+Offset:              3.623ns (Levels of Logic = 4)
+  Source:            IOR0<7> (PAD)
+  Destination:       u4/Mtridata_write_o_7 (LATCH)
+  Destination Clock: u1/temp_FSM_FFd1 falling
+
+  Data Path: IOR0<7> to u4/Mtridata_write_o_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.387  IOR0_7_IBUF (IOR0_7_IBUF)
+     LUT4:I2->O            1   0.612   0.000  u4/Mtridata_write_o_mux0000<7>47_F (N86)
+     MUXF5:I0->O           1   0.278   0.360  u4/Mtridata_write_o_mux0000<7>47 (u4/Mtridata_write_o_mux0000<7>47)
+     LUT4:I3->O            1   0.612   0.000  u4/Mtridata_write_o_mux0000<7>98 (u4/Mtridata_write_o_mux0000<7>)
+     LD:D                      0.268          u4/Mtridata_write_o_7
+    ----------------------------------------
+    Total                      3.623ns (2.876ns logic, 0.747ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.518ns (Levels of Logic = 2)
+  Source:            DBus<7> (PAD)
+  Destination:       u2/ir_o_7 (FF)
+  Destination Clock: clk falling
+
+  Data Path: DBus<7> to u2/ir_o_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.106   0.532  DBus_7_IOBUF (N38)
+     LUT2:I0->O            1   0.612   0.000  ir_t<7>LogicTrst1 (ir_t<7>)
+     FDE_1:D                   0.268          u2/ir_o_7
+    ----------------------------------------
+    Total                      2.518ns (1.986ns logic, 0.532ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/temp_FSM_FFd21'
+  Total number of paths / destination ports: 950 / 73
+-------------------------------------------------------------------------
+Offset:              10.475ns (Levels of Logic = 5)
+  Source:            u3/memr (FF)
+  Destination:       IOW1<7> (PAD)
+  Source Clock:      u1/temp_FSM_FFd21 rising
+
+  Data Path: u3/memr to IOW1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  u3/memr (u3/memr)
+     LUT4:I0->O           21   0.612   1.111  u4/Mtridata_write_o_mux0000<0>212 (u4/N3)
+     LUT4:I0->O           20   0.612   1.089  u4/addr<1>LogicTrst1 (addr_t<1>)
+     LUT4:I0->O            2   0.612   0.532  u6/IOW1_or0000_SW1 (N82)
+     LUT4:I0->O            8   0.612   0.643  u6/IOW1_or0000 (u6/IOW1_data_i_not0000_inv)
+     OBUFT:T->O                3.169          IOW1_7_OBUFT (IOW1<7>)
+    ----------------------------------------
+    Total                     10.475ns (6.131ns logic, 4.344ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 307 / 94
+-------------------------------------------------------------------------
+Offset:              8.859ns (Levels of Logic = 4)
+  Source:            u1/temp_FSM_FFd1 (FF)
+  Destination:       IOW1<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: u1/temp_FSM_FFd1 to IOW1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             33   0.514   1.076  u1/temp_FSM_FFd1 (u1/temp_FSM_FFd1)
+     LUT4:I3->O           20   0.612   1.089  u4/addr<1>LogicTrst1 (addr_t<1>)
+     LUT4:I0->O            2   0.612   0.532  u6/IOW1_or0000_SW1 (N82)
+     LUT4:I0->O            8   0.612   0.643  u6/IOW1_or0000 (u6/IOW1_data_i_not0000_inv)
+     OBUFT:T->O                3.169          IOW1_7_OBUFT (IOW1<7>)
+    ----------------------------------------
+    Total                      8.859ns (5.519ns logic, 3.340ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/temp_FSM_FFd3'
+  Total number of paths / destination ports: 24 / 16
+-------------------------------------------------------------------------
+Offset:              5.462ns (Levels of Logic = 3)
+  Source:            u2/pc_o_15 (FF)
+  Destination:       ABus<15> (PAD)
+  Source Clock:      u1/temp_FSM_FFd3 rising
+
+  Data Path: u2/pc_o_15 to ABus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.514   0.532  u2/pc_o_15 (u2/pc_o_15)
+     LUT2:I0->O            1   0.612   0.000  u6/ABus_mux0000<15>11 (u6/ABus_mux0000<15>1)
+     MUXF5:I1->O           1   0.278   0.357  u6/ABus_mux0000<15>1_f5 (ABus_15_OBUFT)
+     OBUFT:I->O                3.169          ABus_15_OBUFT (ABus<15>)
+    ----------------------------------------
+    Total                      5.462ns (4.573ns logic, 0.889ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.60 secs
+ 
+--> 
+
+Total memory usage is 268804 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

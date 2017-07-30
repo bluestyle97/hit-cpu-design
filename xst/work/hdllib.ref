@@ -1,0 +1,14 @@
+EN mem_access NULL D:/Xilinx/Projects/CPU_test/mem_access.vhd sub00/vhpl10 1501397411
+EN clock NULL D:/Xilinx/Projects/CPU_test/clock.vhd sub00/vhpl00 1501397401
+AR alu behavioral D:/Xilinx/Projects/CPU_test/alu.vhd sub00/vhpl05 1501397406
+AR cpu behavioral D:/Xilinx/Projects/CPU_test/cpu.vhd sub00/vhpl13 1501397414
+EN cpu NULL D:/Xilinx/Projects/CPU_test/cpu.vhd sub00/vhpl12 1501397413
+AR clock behavioral D:/Xilinx/Projects/CPU_test/clock.vhd sub00/vhpl01 1501397402
+EN writebacker NULL D:/Xilinx/Projects/CPU_test/writebacker.vhd sub00/vhpl08 1501397409
+EN fetcher NULL D:/Xilinx/Projects/CPU_test/fetcher.vhd sub00/vhpl02 1501397403
+AR fetcher behavioral D:/Xilinx/Projects/CPU_test/fetcher.vhd sub00/vhpl03 1501397404
+AR writebacker behavioral D:/Xilinx/Projects/CPU_test/writebacker.vhd sub00/vhpl09 1501397410
+AR mem_access behavioral D:/Xilinx/Projects/CPU_test/mem_access.vhd sub00/vhpl11 1501397412
+AR mem_manager behavioral D:/Xilinx/Projects/CPU_test/mem_manager.vhd sub00/vhpl07 1501397408
+EN mem_manager NULL D:/Xilinx/Projects/CPU_test/mem_manager.vhd sub00/vhpl06 1501397407
+EN alu NULL D:/Xilinx/Projects/CPU_test/alu.vhd sub00/vhpl04 1501397405

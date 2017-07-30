@@ -1,0 +1,7 @@
+vhdl work "D:\Xilinx\Projects\CPU_test\writebacker.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\mem_manager.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\mem_access.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\fetcher.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\clock.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\alu.vhd"
+vhdl work "D:\Xilinx\Projects\CPU_test\cpu.vhd"

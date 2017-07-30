@@ -1,0 +1,36 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/Xilinx/Projects/CPU_test/cpu_tb_isim_beh.exe" -prj "D:/Xilinx/Projects/CPU_test/cpu_tb_beh.prj" "work.cpu_tb" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+WARNING:Simulator:1010 - One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/writebacker.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/mem_manager.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/mem_access.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/fetcher.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/clock.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/alu.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/cpu.vhd" into library work
+Parsing VHDL file "D:/Xilinx/Projects/CPU_test/cpu_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 161456 KB
+Fuse CPU Usage: 280 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity clock [clock_default]
+Compiling architecture behavioral of entity fetcher [fetcher_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity mem_manager [mem_manager_default]
+Compiling architecture behavioral of entity writebacker [writebacker_default]
+Compiling architecture behavioral of entity mem_access [mem_access_default]
+Compiling architecture behavioral of entity cpu [cpu_default]
+Compiling architecture behavior of entity cpu_tb
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable D:/Xilinx/Projects/CPU_test/cpu_tb_isim_beh.exe
+Fuse Memory Usage: 177304 KB
+Fuse CPU Usage: 437 ms
